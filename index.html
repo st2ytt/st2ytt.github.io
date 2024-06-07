@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Profile</title>
+    <title>AR Experience with HIRO Markers</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to my GitHub profile page.</p>
+    <a-scene embedded arjs="debugUIEnabled: false;">
+        <!-- Define HIRO marker -->
+        <a-marker preset="hiro">
+            <!-- Add 3D content that will appear when the marker is detected -->
+            <a-box position="0 0.5 0" material="color: red;"></a-box>
+        </a-marker>
+        
+        <!-- Define the camera -->
+        <a-entity camera></a-entity>
+    </a-scene>
 </body>
 </html>
