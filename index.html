@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Experience with HIRO Markers</title>
+    <title>AR Experience with HIRO Marker</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.11/aframe/build/aframe-ar.js"></script>
 </head>
 <body>
-    <a-scene embedded arjs="debugUIEnabled: false;">
+    <a-scene embedded arjs>
         <!-- Define HIRO marker -->
         <a-marker preset="hiro">
             <!-- Add 3D content that will appear when the marker is detected -->
-            <a-box position="0 0.5 0" material="color: red;"></a-box>
+            <a-entity
+                position="0 0 0"
+                scale="0.1 0.1 0.1"
+                gltf-model="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models/2.0/Duck/glTF/Duck.gltf"
+            ></a-entity>
         </a-marker>
         
         <!-- Define the camera -->
